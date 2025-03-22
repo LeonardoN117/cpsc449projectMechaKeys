@@ -16,7 +16,7 @@ const HomePage = () => {
       <section className="content-section">
         <img src="/images/keyboards.jpg" alt="Keyboards"/>
         <div>
-          <h2>Mechanical Keyboards</h2>
+          <h2>Keyboards</h2>
           <p>Discover the latest mechanical keyboards designed for gamers and professionals.</p>
           <Link to="/keyboard" className="cta-button">Browse Keyboards</Link>
         </div>
