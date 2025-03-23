@@ -62,9 +62,10 @@ function App() {
       <nav className="navbar">
         <div className="logo">
           <Link to="/">
-            <img src="/images/logo.png" alt="MechaKeys Logo" />
+            <img src="/images/logo.png" alt="MechaKeys Logo" />            
           </Link>
         </div>
+        <h1>MechaKeys</h1>
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/keyboard">Keyboards</Link>
@@ -91,8 +92,8 @@ function App() {
         <p>&copy; 2025 MechaKeys. All rights reserved.</p>
         <div className="social-links">
           <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
           <a href="#">Instagram</a>
+          <a href="#">X</a>
         </div>
       </footer>
     </Router>

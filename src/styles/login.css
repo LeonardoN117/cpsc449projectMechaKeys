@@ -1,0 +1,37 @@
+.login-container {
+    display: block;
+    background-color: #212177;
+    padding: 30px;
+    text-align: center;
+    width: 25%;
+    height: 300px;
+    margin: 5px auto;
+}
+
+.login-container form {
+    height : 100px;
+}
+.login-container label {
+    font-size: 20px;
+}
+
+.login-container input {
+    margin: 15px;
+    width: 50%;
+    height: 20px;
+}
+
+.login-container button {
+    background-color: #15023e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.login-container img {
+    height: 30px;
+    margin:  0 0 -20px 0;
+}
