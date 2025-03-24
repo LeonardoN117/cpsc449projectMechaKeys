@@ -1,3 +1,4 @@
+//for pushing purposes
 import React, { useState } from "react";
 import "../styles/SwitchesPage.css";
 import { switchData } from "../data/switchData";
