@@ -1,0 +1,103 @@
+import React, { useState } from "react";
+import "../styles/SwitchesPage.css";
+import { switchData } from "../data/switchData";
+import SwitchCard from "../components/SwitchCard";
+import SwitchModal from "../components/SwitchModal";
+import Filters from "../components/Filters";
+
+function SwitchPage({ addToCart, orders, setOrders}) {
+  const [switches, setSwitch] = useState(switchData);
+  const [selectedSwitch, setSelectedSwitch] = useState(null);
+  const [selectedColor, setSelectedColor] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOption, setSortOption] = useState("name");
+
+  const handleCardClick = (switchItem) => {
+    setSelectedSwitch(switchItem);
+    setSelectedColor(switchItem.selectedColor);
+  };
+
+  const handleColorChange = (e) => {
+    setSelectedColor(e.target.value);
+  };
+
+  const handleAddToCart = () => {
+    if (selectedSwitch) {
+      addToCart(selectedSwitch, selectedColor);
+      setSelectedSwitch(null);
+    }
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSortChange = (e) => {
+    setSortOption(e.target.value);
+  };
+
+  let displayedSwitches = switches.filter(switchItem =>
+    switchItem.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  if (sortOption === "priceLowToHigh") {
+    displayedSwitches.sort((a, b) => a.price - b.price);
+  } else if (sortOption === "priceHighToLow") {
+    displayedSwitches.sort((a, b) => b.price - a.price);
+  } else if (sortOption === "name") {
+    displayedSwitches.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  const handleAddReview = (newRating) => {
+    if (!selectedSwitch) return;
+    const keyboardId = selectedSwitch.id;
+    // Update the keyboards data
+    setSwitch(prevSwitch => prevSwitch.map(sw => {
+      if (sw.id === keyboardId) {
+        return { ...sw, reviews: [...sw.reviews, newRating] };
+      }
+      return sw;
+    }));
+    // Update the selected keyboard (for immediate modal display)
+    setSelectedSwitch(prev => prev ? { ...prev, reviews: [...prev.reviews, newRating] } : null);
+  };
+
+  // The user can review if the selected keyboard appears in their orders
+  const canReview = selectedSwitch
+    ? orders.some(order => order.id === selectedSwitch.id)
+    : false;
+
+  return (
+    <div className="Switch-page">
+      <h1>Switches</h1>
+      <p>Browse our selection of high-quality keyboard switches.</p>
+
+      <Filters
+        searchTerm={searchTerm}
+        sortOption={sortOption}
+        onSearchChange={handleSearchChange}
+        onSortChange={handleSortChange}
+      />
+
+      <div className="keyboard-grid">
+        {displayedSwitches.map((switchItem) => (
+          <SwitchCard key={switchItem.id} switchItem={switchItem} onClick={handleCardClick} />
+        ))}
+      </div>
+
+      {selectedSwitch && (
+        <SwitchModal
+          switch={selectedSwitch}
+          selectedColor={selectedColor}
+          onColorChange={handleColorChange}
+          onAddToCart={handleAddToCart}
+          onClose={() => setSelectedSwitch(null)}
+          onAddReview={handleAddReview}
+          canReview={canReview}
+        />
+      )}
+    </div>
+  );
+}
+
+export default SwitchPage;
