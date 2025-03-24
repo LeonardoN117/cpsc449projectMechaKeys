@@ -4,7 +4,7 @@ import HomePage from "./Pages/HomePage";
 import KeyboardPage from "./Pages/KeyboardsPage";
 import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/Signup";
-import SwitchesPage from "./Pages/Switche";
+import SwitchPage from "./Pages/Switche";
 import CartPage from "./Pages/Cart";
 import "./styles/App.css";
 
@@ -80,7 +80,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />          
             <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
-            <Route path="/switches" element={<SwitchesPage />} />
+            <Route path="/switches" element={<SwitchPage addToCart={addToCart} orders={orders} setOrders={setOrders}/>} />
             <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
