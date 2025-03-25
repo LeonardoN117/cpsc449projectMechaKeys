@@ -5,7 +5,7 @@ const Filters = ({ searchTerm, sortOption, onSearchChange, onSortChange }) => (
   <div className="filters">
     <input 
       type="text" 
-      placeholder="Search keyboards..." 
+      placeholder="Search product..." 
       value={searchTerm}
       onChange={onSearchChange}
     />

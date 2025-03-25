@@ -72,7 +72,7 @@ function SwitchPage({ addToCart, orders, setOrders }) {
     : false;
 
   return (
-    <div className="SwitchPage">
+    <div className="switch-page">
       <h1>Switches</h1>
       <p>Browse our selection of high-quality keyboard switches.</p>
 
