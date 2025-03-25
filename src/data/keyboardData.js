@@ -20,7 +20,7 @@ export const keyboardsData = [
     images: {
       Black: "/images/gaming_black.webp",
       Blue: "/images/gaming_blue.webp",
-      Green: "/images/gaming_green.webp"
+      Green: "/images/game_green.webp"
     },
     description: "Perfect for gamers with fast response times and dynamic backlighting.",
     price: 150,
@@ -34,12 +34,12 @@ export const keyboardsData = [
     name: "Ergonomic Keyboard",
     images: {
       Gray: "/images/ergo_gray.webp",
-      Black: "/images/ergo_black.webp"
+      Black: "/images/ergo_black.jpg"
     },
     description: "Designed for comfort and efficiency during long typing sessions.",
     price: 100,
     availableColors: ["Gray", "Black"],
-    selectedColor: "Gray",
+    selectedColor: "Black",
     reviews: [4, 4, 4, 4],
     connectivity: "Wired"
   },

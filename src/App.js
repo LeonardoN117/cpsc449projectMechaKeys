@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import AboutPage from "./Pages/AboutPage";
 import KeyboardPage from "./Pages/KeyboardsPage";
 import LoginPage from "./Pages/LoginPage";
-import SwitchesPage from "./Pages/Switche";
+import SignupPage from "./Pages/Signup";
+import SwitchPage from "./Pages/Switche";
 import CartPage from "./Pages/Cart";
 import "./styles/App.css";
 
@@ -59,42 +59,44 @@ function App() {
   
   return (
     <Router>
-      <nav className="navbar">
-        <div className="logo">
-          <Link to="/">
-            <img src="/images/logo.png" alt="MechaKeys Logo" />
-          </Link>
-        </div>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/keyboard">Keyboards</Link>
-          <Link to="/switches">Switches</Link>
-          <Link to="/about">About</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/login">Login</Link>
-        </div>
-      </nav>
+      <div className="App-layout">
+        <nav className="navbar">
+          <div className="logo">
+            <Link to="/">
+              <img src="/images/logo.png" alt="MechaKeys Logo" />            
+            </Link>
+          </div>
+          <h2>MechaKeys</h2>
+          <div className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/keyboard">Keyboards</Link>
+            <Link to="/switches">Switches</Link>
+            <Link to="/cart">Cart</Link>
+            <Link to="/login">Login</Link>
+          </div>
+        </nav>
 
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />          
-          <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
-          <Route path="/switches" element={<SwitchesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />          
+            <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
+            <Route path="/switches" element={<SwitchPage addToCart={addToCart} orders={orders} setOrders={setOrders}/>} />
+            <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+          </Routes>
+        </div>
+
+        {/* Footer Section */}
+        <footer className="footer">
+          <p>&copy; 2025 MechaKeys. All rights reserved.</p>
+          <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">X</a>
+          </div>
+        </footer>
       </div>
-
-      {/* Footer Section */}
-      <footer className="footer">
-        <p>&copy; 2025 MechaKeys. All rights reserved.</p>
-        <div className="social-links">
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
-        </div>
-      </footer>
     </Router>
     
   );

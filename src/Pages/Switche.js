@@ -1,4 +1,3 @@
-//for pushing purposes
 import React, { useState } from "react";
 import "../styles/SwitchesPage.css";
 import { switchData } from "../data/switchData";
@@ -6,8 +5,8 @@ import SwitchCard from "../components/SwitchCard";
 import SwitchModal from "../components/SwitchModal";
 import Filters from "../components/Filters";
 
-function SwitchPage({ addToCart, orders, setOrders}) {
-  const [switches, setSwitch] = useState(switchData);
+function SwitchPage({ addToCart, orders, setOrders }) {
+  const [switches, setSwitches] = useState(switchData);
   const [selectedSwitch, setSelectedSwitch] = useState(null);
   const [selectedColor, setSelectedColor] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
@@ -37,7 +36,7 @@ function SwitchPage({ addToCart, orders, setOrders}) {
     setSortOption(e.target.value);
   };
 
-  let displayedSwitches = switches.filter(switchItem =>
+  let displayedSwitches = switches.filter((switchItem) =>
     switchItem.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -51,25 +50,29 @@ function SwitchPage({ addToCart, orders, setOrders}) {
 
   const handleAddReview = (newRating) => {
     if (!selectedSwitch) return;
-    const keyboardId = selectedSwitch.id;
-    // Update the keyboards data
-    setSwitch(prevSwitch => prevSwitch.map(sw => {
-      if (sw.id === keyboardId) {
-        return { ...sw, reviews: [...sw.reviews, newRating] };
-      }
-      return sw;
-    }));
-    // Update the selected keyboard (for immediate modal display)
-    setSelectedSwitch(prev => prev ? { ...prev, reviews: [...prev.reviews, newRating] } : null);
+    const switchId = selectedSwitch.id;
+    
+    setSwitches((prevSwitches) =>
+      prevSwitches.map((sw) => {
+        if (sw.id === switchId) {
+          return { ...sw, reviews: [...sw.reviews, newRating] };
+        }
+        return sw;
+      })
+    );
+
+    setSelectedSwitch((prev) =>
+      prev ? { ...prev, reviews: [...prev.reviews, newRating] } : null
+    );
   };
 
-  // The user can review if the selected keyboard appears in their orders
+  // The user can review if the selected switch appears in their orders
   const canReview = selectedSwitch
-    ? orders.some(order => order.id === selectedSwitch.id)
+    ? orders.some((order) => order.id === selectedSwitch.id)
     : false;
 
   return (
-    <div className="Switch-page">
+    <div className="switch-page">
       <h1>Switches</h1>
       <p>Browse our selection of high-quality keyboard switches.</p>
 
@@ -80,7 +83,7 @@ function SwitchPage({ addToCart, orders, setOrders}) {
         onSortChange={handleSortChange}
       />
 
-      <div className="keyboard-grid">
+      <div className="switch-grid">
         {displayedSwitches.map((switchItem) => (
           <SwitchCard key={switchItem.id} switchItem={switchItem} onClick={handleCardClick} />
         ))}
@@ -88,7 +91,7 @@ function SwitchPage({ addToCart, orders, setOrders}) {
 
       {selectedSwitch && (
         <SwitchModal
-          switch={selectedSwitch}
+          Switch={selectedSwitch}
           selectedColor={selectedColor}
           onColorChange={handleColorChange}
           onAddToCart={handleAddToCart}

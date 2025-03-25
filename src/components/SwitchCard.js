@@ -1,29 +1,28 @@
-//for pushing to GitHub
 import React from 'react';
-import '../styles/KeyboardsPage.css';
+import '../styles/SwitchesPage.css';
 
-const SwitchCard = ({ Switch, onClick }) => {
+const SwitchCard = ({ switchItem, onClick }) => {
   const averageRating =
-    Switch.reviews && Switch.reviews.length > 0
-      ? (Switch.reviews.reduce((acc, cur) => acc + cur, 0) / Switch.reviews.length).toFixed(1)
+    switchItem.reviews && switchItem.reviews.length > 0
+      ? (switchItem.reviews.reduce((acc, cur) => acc + cur, 0) / switchItem.reviews.length).toFixed(1)
       : "No reviews";
 
   return (
-    <div className="Switch-card" onClick={() => onClick(Switch)}>
+    <div className="switch-card" onClick={() => onClick(switchItem)}>
       <img
-        src={Switch.images[Switch.selectedColor]}
-        alt={`${Switch.name} - ${Switch.selectedColor}`}
-        className="Switch-image" />
+        src={switchItem.images[switchItem.selectedColor]}
+        alt={`${switchItem.name} - ${switchItem.selectedColor}`}
+        className="switch-image"
+      />
 
-      <div className="Switch-details">
-        <h2>{Switch.name}</h2>
-        <p className="Switch-price">${Switch.price}</p>
-        <p className="Switch-color">Color: {Switch.selectedColor}</p>
-        <p className="Switch-rating">Rating: {averageRating}⭐</p>
-        <p className="Switch-connectivity">Connectivity: {Switch.connectivity}</p>
+      <div className="switch-details">
+        <h2>{switchItem.name}</h2>
+        <p className="switch-price">${switchItem.price.toFixed(2)}</p>
+        <p className="switch-type">Type: {switchItem.type}</p>
+        <p className="switch-rating">Rating: {averageRating}⭐</p>
       </div>
     </div>
   );
-};
+};   
 
 export default SwitchCard;
