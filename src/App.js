@@ -6,6 +6,7 @@ import LoginPage from "./Pages/LoginPage";
 import SignupPage from "./Pages/Signup";
 import SwitchPage from "./Pages/Switche";
 import CartPage from "./Pages/Cart";
+import AccessoriesPage from "./Pages/AccessoriesPage";
 import "./styles/App.css";
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
             <Link to="/">Home</Link>
             <Link to="/keyboard">Keyboards</Link>
             <Link to="/switches">Switches</Link>
+            <Link to="/accessories">Accessories</Link>
             <Link to="/cart">Cart</Link>
             <Link to="/login">Login</Link>
           </div>
@@ -81,6 +83,7 @@ function App() {
             <Route path="/" element={<HomePage />} />          
             <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
             <Route path="/switches" element={<SwitchPage addToCart={addToCart} orders={orders} setOrders={setOrders}/>} />
+            <Route path="/accessories" element={<AccessoriesPage addToCart={addToCart} orders={orders} setOrders={setOrders}/>} />
             <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
