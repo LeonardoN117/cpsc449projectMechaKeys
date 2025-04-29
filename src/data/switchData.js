@@ -1,6 +1,6 @@
 export const switchData = [
     {
-      id: 1,
+      id: 5,
       name: "Blue switch",
       images: {
         Blue: "/images/switch3.jpg",
@@ -13,7 +13,7 @@ export const switchData = [
       type :"Tactile"
     },
     {
-      id: 2,
+      id: 6,
       name: "Teal switch",
       images: {
         Teal: "/images/switch2.webp",
@@ -27,7 +27,7 @@ export const switchData = [
 
      },
     {
-      id: 3,
+      id: 7,
       name: "Black Switch  ",
       images: {
         Black: "/images/switch4.jpg",
@@ -41,7 +41,7 @@ export const switchData = [
       type :"Linear"
      },
     {
-      id: 4,
+      id: 8,
       name: "Brown switch",
       images: {
         Brown: "/images/switch5.jpg",

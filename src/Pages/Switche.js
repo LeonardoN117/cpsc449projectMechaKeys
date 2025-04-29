@@ -91,7 +91,7 @@ function SwitchPage({ addToCart, orders, setOrders }) {
 
       {selectedSwitch && (
         <SwitchModal
-          switchItem={selectedSwitch}
+          Switch={selectedSwitch}
           selectedColor={selectedColor}
           onColorChange={handleColorChange}
           onAddToCart={handleAddToCart}
