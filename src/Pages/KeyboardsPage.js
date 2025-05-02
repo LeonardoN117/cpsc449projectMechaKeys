@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { supabase } from "../data/supabaseClient";
 import "../styles/KeyboardsPage.css";
 import { keyboardsData } from "../data/keyboardData";
 import KeyboardCard from "../components/KeyboardCard";
 import KeyboardModal from "../components/KeyboardModal";
 import Filters from "../components/Filters";
 
-function KeyboardPage({ addToCart, orders, setOrders}) {
+function KeyboardPage({ addToCart, user}) {
   const [keyboards, setKeyboards] = useState(keyboardsData);
   const [selectedKeyboard, setSelectedKeyboard] = useState(null);
   const [selectedColor, setSelectedColor] = useState("");
@@ -63,9 +64,24 @@ function KeyboardPage({ addToCart, orders, setOrders}) {
   };
 
   // The user can review if the selected keyboard appears in their orders
-  const canReview = selectedKeyboard
-    ? orders.some(order => order.id === selectedKeyboard.id)
-    : false;
+  const [canReview, setCanReview] = useState(false);
+
+  useEffect(() => {
+    const checkIfOrdered = async () => {
+      if (!selectedKeyboard || !user) return setCanReview(false);
+      
+      const { data, error } = await supabase
+        .from("orders")
+        .select("product_name")
+        .eq("user_id", user.id)
+        .eq("product_name", selectedKeyboard.name);
+  
+      setCanReview(data && data.length > 0);
+    };
+  
+    checkIfOrdered();
+  }, [selectedKeyboard, user]);
+  
 
   return (
     <div className="keyboard-page">
