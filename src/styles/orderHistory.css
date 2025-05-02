@@ -1,0 +1,31 @@
+.history-container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background-color: #212177;
+    border-radius: 8px;
+  }
+  
+  .order-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #1a1a40;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .order-thumb {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+  }
+  
+  
+
