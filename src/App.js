@@ -7,10 +7,10 @@ import SignupPage from "./Pages/Signup";
 import SwitchPage from "./Pages/Switche";
 import CartPage from "./Pages/Cart";
 import AccessoriesPage from "./Pages/AccessoriesPage";
-import { supabase } from "./data/supabaseClient";
-import "./styles/App.css";
 import SettingsPage from "./Pages/Settings";
 import OrderHistoryPage from "./Pages/OrderHistory";
+import { supabase } from "./data/supabaseClient";
+import "./styles/App.css";
 
 function AppContent() {
   const [cart, setCart] = useState([]);
@@ -21,39 +21,55 @@ function AppContent() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const hideFooter = location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/settings";
+  const hideFooter = ["/login", "/signup", "/settings"].includes(location.pathname);
 
-  // Fetch user session on mount and listen for auth changes
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchUserAndOrders = async () => {
       const { data: { session } } = await supabase.auth.getSession();
       if (session?.user) {
         setUser(session.user);
+
+        const { data: userOrders, error } = await supabase
+          .from("orders")
+          .select("*")
+          .eq("user_id", session.user.id);
+
+        if (!error) {
+          setOrders(userOrders);
+        } else {
+          console.error("Failed to fetch orders:", error);
+        }
       }
     };
-    fetchUser();
+
+    fetchUserAndOrders();
 
     const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session?.user) {
         setUser(session.user);
+
+        supabase
+          .from("orders")
+          .select("*")
+          .eq("user_id", session.user.id)
+          .then(({ data, error }) => {
+            if (!error) setOrders(data);
+          });
       } else {
         setUser(null);
+        setOrders([]);
       }
     });
 
-    return () => {
-      authListener?.subscription?.unsubscribe();
-    };
+    return () => authListener?.subscription?.unsubscribe();
   }, []);
 
-  // Close dropdown if click outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setShowDropdown(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -81,29 +97,36 @@ function AppContent() {
 
   const handleCheckout = async () => {
     if (cart.length === 0 || !user) {
-      alert("Your cart is empty.");
+      alert("Your cart is empty or you're not logged in.");
       return;
     }
-  
+
     const orderPromises = cart.map((item) =>
       supabase.from("orders").insert({
-        user_id: user.id, 
+        user_id: user.id,
         product_name: item.name,
         selected_color: item.selectedColor,
         quantity: item.quantity,
         price: item.price
       })
     );
-  
+
     const results = await Promise.all(orderPromises);
     const errors = results.filter(r => r.error);
-  
+
     if (errors.length > 0) {
       console.error("Some errors occurred:", errors);
       alert("Some orders failed. Please try again.");
     } else {
       setCart([]);
       alert("Checkout successful! Your order has been placed.");
+
+      const { data: updatedOrders } = await supabase
+        .from("orders")
+        .select("*")
+        .eq("user_id", user.id);
+
+      setOrders(updatedOrders || []);
     }
   };
 
@@ -154,9 +177,9 @@ function AppContent() {
       <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
-          <Route path="/switches" element={<SwitchPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
-          <Route path="/accessories" element={<AccessoriesPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
+          <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} user={user} />} />
+          <Route path="/switches" element={<SwitchPage addToCart={addToCart} user={user} />} />
+          <Route path="/accessories" element={<AccessoriesPage addToCart={addToCart} user={user} />} />
           <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
