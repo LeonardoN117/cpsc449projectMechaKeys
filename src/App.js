@@ -9,6 +9,8 @@ import CartPage from "./Pages/Cart";
 import AccessoriesPage from "./Pages/AccessoriesPage";
 import { supabase } from "./data/supabaseClient";
 import "./styles/App.css";
+import SettingsPage from "./Pages/Settings";
+import OrderHistoryPage from "./Pages/OrderHistory";
 
 function AppContent() {
   const [cart, setCart] = useState([]);
@@ -19,7 +21,7 @@ function AppContent() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const hideFooter = location.pathname === "/login" || location.pathname === "/signup";
+  const hideFooter = location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/settings";
 
   // Fetch user session on mount and listen for auth changes
   useEffect(() => {
@@ -77,20 +79,29 @@ function AppContent() {
     setCart(cart.filter(item => !(item.id === id && item.selectedColor === color)));
   };
 
-  const handleCheckout = () => {
-    if (cart.length > 0) {
-      const newOrders = [...orders];
-      cart.forEach(item => {
-        const existingOrderIndex = newOrders.findIndex(
-          order => order.id === item.id && order.selectedColor === item.selectedColor
-        );
-        if (existingOrderIndex >= 0) {
-          newOrders[existingOrderIndex].quantity += item.quantity;
-        } else {
-          newOrders.push({ ...item });
-        }
-      });
-      setOrders(newOrders);
+  const handleCheckout = async () => {
+    if (cart.length === 0 || !user) {
+      alert("Your cart is empty.");
+      return;
+    }
+  
+    const orderPromises = cart.map((item) =>
+      supabase.from("orders").insert({
+        user_id: user.id, 
+        product_name: item.name,
+        selected_color: item.selectedColor,
+        quantity: item.quantity,
+        price: item.price
+      })
+    );
+  
+    const results = await Promise.all(orderPromises);
+    const errors = results.filter(r => r.error);
+  
+    if (errors.length > 0) {
+      console.error("Some errors occurred:", errors);
+      alert("Some orders failed. Please try again.");
+    } else {
       setCart([]);
       alert("Checkout successful! Your order has been placed.");
     }
@@ -128,6 +139,7 @@ function AppContent() {
               />
               {showDropdown && (
                 <div className="dropdown-menu">
+                  <Link to="/orderHistory" onClick={() => setShowDropdown(false)}>Order History</Link>
                   <Link to="/settings" onClick={() => setShowDropdown(false)}>Settings</Link>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -148,6 +160,8 @@ function AppContent() {
           <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/orderHistory" element={<OrderHistoryPage orders={orders} />} />
         </Routes>
       </div>
 
