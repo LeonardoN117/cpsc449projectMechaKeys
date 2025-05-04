@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { supabase } from "../data/supabaseClient";
 import "../styles/SwitchesPage.css";
 import { switchData } from "../data/switchData";
 import SwitchCard from "../components/SwitchCard";
 import SwitchModal from "../components/SwitchModal";
 import Filters from "../components/Filters";
 
-function SwitchPage({ addToCart, orders, setOrders }) {
+function SwitchPage({ addToCart, user}) {
   const [switches, setSwitches] = useState(switchData);
   const [selectedSwitch, setSelectedSwitch] = useState(null);
   const [selectedColor, setSelectedColor] = useState("");
@@ -67,14 +68,29 @@ function SwitchPage({ addToCart, orders, setOrders }) {
   };
 
   // The user can review if the selected switch appears in their orders
-  const canReview = selectedSwitch
-    ? orders.some((order) => order.id === selectedSwitch.id)
-    : false;
+  const [canReview, setCanReview] = useState(false);
+
+useEffect(() => {
+  const checkIfOrdered = async () => {
+    if (!selectedSwitch || !user) return setCanReview(false);
+    
+    const { data, error } = await supabase
+      .from("orders")
+      .select("product_name")
+      .eq("user_id", user.id)
+      .eq("product_name", selectedSwitch.name);
+
+    setCanReview(data && data.length > 0);
+  };
+
+  checkIfOrdered();
+}, [selectedSwitch, user]);
+
 
   return (
     <div className="switch-page">
       <h1>Switches</h1>
-      <p>Browse our selection of high-quality keyboard switches.</p>
+      <p>Browse our selection of high-quality Switch switches.</p>
 
       <Filters
         searchTerm={searchTerm}

@@ -40,7 +40,7 @@ const HomePage = () => {
           <p>Enhance your setup with high-quality keyboard accessories.</p>
           <Link to="/accessories" className="cta-button">Shop Accessories</Link>
         </div>
-      </section>
+      </section> 
     </div>
   );
 };

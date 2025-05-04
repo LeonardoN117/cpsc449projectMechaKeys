@@ -1,42 +1,33 @@
-.signup-container {
+.settings-container {
     display: flex;
     flex-direction: column;
     background-color: #212177;
+    padding: 15px;
     text-align: center;
-    width: 30%;
+    width: 50%;
     margin: auto;
 }
 
-.signup-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.settings-container p {
+    margin: 10px 0;
+}
+.settings-container form {
+    height : auto;
 }
 
-.signup-container input {
+.settings-container input {
     margin: 10px;
     width: 50%;
     height: 20px;
 }
 
-.signup-container button {
+.settings-container button {
     background-color: #15023e;
     color: white;
     border: none;
     border-radius: 8px;
     padding: 10px;
-    width: 70%;
+    width: 50%;
     margin: 20px 0;
     cursor: pointer;
-}
-
-.signup {
-    color: white;
-    margin: auto;
-}
-
-.signup-container img {
-    width: 30px;
-    height: 30px;
-    margin: auto;
 }
