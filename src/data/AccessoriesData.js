@@ -1,10 +1,6 @@
 export const accessoriesData = [
     {
-<<<<<<< HEAD
       id: 200,
-=======
-      id: 9,
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Mechanical Keyboard Cleaner Kit",
       images: {
         Standard: "/images/mech_black.webp",
@@ -15,14 +11,10 @@ export const accessoriesData = [
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE",
+      connectivity: "Physical",
     },
     {
-<<<<<<< HEAD
       id: 201,
-=======
-      id: 10,
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Headset stand",
       images: {
         Black: "/images/headset_stand.jpeg",
@@ -32,98 +24,83 @@ export const accessoriesData = [
       availableColors: ["Black"],
       selectedColor: "Black",
       reviews: [5, 4, 5, 5],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
-<<<<<<< HEAD
       id: 202,
-=======
-      id: 11,
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Keyboard Wrist Rest",
       images: {
-        Black: "/images/keyrest.jpg"
+        Black: "/images/wristrest.webp"
       },
       description: "Designed for comfort and efficiency during long typing sessions.",
-      price: 20,
+      price: 15,
       availableColors:  ["Black"],
       selectedColor: "Black",
       reviews: [4, 4, 4, 4],
-      connectivity: "Clips"
+      connectivity: "Physical",
+      type: "Comfort"
+
     },
     {
-<<<<<<< HEAD
       id: 203,
       name: "Keyboard Case",
-=======
-      id: 12,
-      name: "Keyboard Shell",
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       images: {
-        White: "/images/white_shell.jpg",
+        White: "/images/keyboardcase.jpg",
         Black: "/images/black_shell.jpg"
       },
       description: "With the intent of providing ownership of your very own 65% keyboard to your design, use our keyoard shell for that first step.",
-      price: 90,
+      price: 20,
       availableColors: ["White", "Black"],
       selectedColor: "White",
       reviews: [4, 3, 4, 5],
-      connectivity: "User choice"
+      connectivity: "User choice",
+      type: "Storage"
 
-<<<<<<< HEAD
     },
     {
       id: 204,
       name: "Switch Puller",
       images: {
-        Standard: "/images/switch_puller.jpg",
+        Standard: "/images/switchpuller.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 5,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Cleaning"
     },
     {
       id: 205,
       name: "Keycap Puller",
       images: {
-        Standard: "/images/keycap_puller.jpg",
+        Standard: "/images/keycappull.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 5,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Cleaning"
     },
     {
       id: 206,
       name: "Switch Tester",
       images: {
-        Standard: "/images/switch_tester.jpg",
+        Standard: "/images/tester.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Testing"
     },
-    {
-      id: 207,
-      name: "Keycap Set",
-      images: {
-        Standard: "/images/keycap_set.jpg",
-      },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
-      availableColors: ["Standard"],
-      selectedColor: "Standard",
-      reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
-    },
+
     {
       id: 208,
       name: "Cable",
@@ -131,11 +108,12 @@ export const accessoriesData = [
         Standard: "/images/cable.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 6,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Wired",
+      type: "Connectivity"
     },
     {
       id: 209,
@@ -144,11 +122,12 @@ export const accessoriesData = [
         Standard: "/images/mousepad.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 20,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Comfort"
     },
     {
       id: 210,
@@ -161,20 +140,22 @@ export const accessoriesData = [
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "USB",
+      type: "Connectivity"
     },
     {
       id: 211,
       name: "Headset",
       images: {
-        Standard: "/images/headset.jpg",
+        Standard: "/images/headset.png",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 40,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Wired",
+      type: "Connectivity"
     },
     {
       id: 212,
@@ -183,119 +164,111 @@ export const accessoriesData = [
         Standard: "/images/monitor.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 80,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Connectivity"
     },
     {
       id: 213,
       name: "Keyboard Stand",
       images: {
-        Standard: "/images/desk.jpg",
+        Standard: "/images/keyboardstand.webp",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 35,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
-    },
-    {
-      id: 214,
-      name: "Desk",
-      images: {
-        Standard: "/images/desk.jpg",
-      },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
-      availableColors: ["Standard"],
-      selectedColor: "Standard",
-      reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
       id: 215,
       name: "Monitor Stand",
       images: {
-        Standard: "/images/monitor_stand.jpg",
+        Standard: "/images/monitorstand.webp",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price:25,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
       id: 216,
       name: "Cable Management Clip",
       images: {
-        Standard: "/images/cable_management.jpg",
+        Standard: "/images/cableclip.avif",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 6,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
       id: 217,
       name: "Cable Management Sleeve",
       images: {
-        Standard: "/images/cable_management.jpg",
+        Standard: "/images/cablesleeve2.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
       id: 218,
       name: "Cable Management Box",
       images: {
-        Standard: "/images/cable_management.jpg",
+        Standard: "/images/cablebox2.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 12,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
       id: 219,
       name: "Cable Management Sleeve",
       images: {
-        Standard: "/images/cable_management.jpg",
+        Standard: "/images/cablesleeve.jpg",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
       id: 220,
       name: "Cable Management Box",
       images: {
-        Standard: "/images/cable_management.jpg",
+        Standard: "/images/cablebox.avif",
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
-      price: 10,
+      price: 12,
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     }
     
-=======
-    }
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
   ];
   

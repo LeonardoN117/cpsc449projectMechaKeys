@@ -2,11 +2,7 @@ export const switchData = [
     
     
     {
-<<<<<<< HEAD
       id: 205,
-=======
-      id: 5,
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Blue switch",
       images: {
         Blue: "/images/switch3.jpg",
@@ -19,11 +15,7 @@ export const switchData = [
       type :"Tactile"
     },
     {
-<<<<<<< HEAD
       id: 206,
-=======
-      id: 6,
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Teal switch",
       images: {
         Teal: "/images/switch2.webp",
@@ -37,11 +29,7 @@ export const switchData = [
 
      },
     {
-<<<<<<< HEAD
       id: 207,
-=======
-      id: 7,
->>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Black Switch  ",
       images: {
         Black: "/images/switch4.jpg",
@@ -85,7 +73,7 @@ export const switchData = [
       id: 10,
       name: "Yellow switch",
       images: {
-        Yellow: "/images/swi6.jpg",
+        Yellow: "/images/yelloww.webp",
       },
       description: "Linear and smooth. There's no bump or click, just a smooth keystroke.",
       price: 2.50,
@@ -96,20 +84,20 @@ export const switchData = [
      },
     {
       id: 11,
-      name: "White switch",
+      name: "Clear switch",
       images: {
-        White: "/images/swi7.jpg",
+        Clear: "/images/swi7.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
-      availableColors: ["White"],
-      selectedColor: "White",
+      availableColors: ["Clear"],
+      selectedColor: "Clear",
       reviews: [5, 4, 5, 4],
       type :"Tactile"
      },
     {
       id: 12,
-      name: "Green switch",
+      name: "Pure Green switch",
       images: {
         Green: "/images/swi8.webp",
       },
@@ -122,35 +110,9 @@ export const switchData = [
      },
     {
       id: 13,
-      name: "Purple switch",
-      images: {
-        Purple: "/images/swi9.png",
-      },
-      description: "Clicky and tactile where you can hear each click.",
-      price: 3.00,
-      availableColors: ["Purple"],
-      selectedColor: "Purple",
-      reviews: [5, 4, 5, 4],
-      type :"Tactile"
-     },
-    {
-      id: 14,
-      name: "Gray switch",
-      images: {
-        Gray: "/images/swi10.webp",
-      },
-      description: "Clicky and tactile where you can hear each click.",
-      price: 3.00,
-      availableColors: ["Gray"],
-      selectedColor: "Gray",
-      reviews: [5, 4, 5, 4],
-      type :"Tactile"
-     },
-    {
-      id: 15,
       name: "Pink switch",
       images: {
-        Pink: "/images/swi11.jpg",
+        Pink: "/images/swi9.png",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -160,15 +122,41 @@ export const switchData = [
       type :"Tactile"
      },
     {
-      id: 16,
-      name: "Orange switch",
+      id: 14,
+      name: "Yellow switch plus",
       images: {
-        Orange: "/images/swi12.jpg",
+        Yellow: "/images/swi10.webp",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
-      availableColors: ["Orange"],
-      selectedColor: "Orange",
+      availableColors: ["Yellow"],
+      selectedColor: "Yellow",
+      reviews: [5, 4, 5, 4],
+      type :"Tactile"
+     },
+    {
+      id: 15,
+      name: "Pure Black switch",
+      images: {
+        Black: "/images/swi11.jpg",
+      },
+      description: "Clicky and tactile where you can hear each click.",
+      price: 3.00,
+      availableColors: ["Black"],
+      selectedColor: "Black",
+      reviews: [5, 4, 5, 4],
+      type :"Tactile"
+     },
+    {
+      id: 16,
+      name: "Dull switch",
+      images: {
+        Dull: "/images/swi12.jpg",
+      },
+      description: "Clicky and tactile where you can hear each click.",
+      price: 3.00,
+      availableColors: ["Dull"],
+      selectedColor: "Dull",
       reviews: [5, 4, 5, 4],
       type :"Tactile"
      },
@@ -187,40 +175,40 @@ export const switchData = [
      },
     {
       id: 18,
-      name: "Silver switch",
+      name: "Joker switch",
       images: {
-        Silver: "/images/swi14.jpg",
+        Joker: "/images/swi14.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
-      availableColors: ["Silver"],
-      selectedColor: "Silver",
+      availableColors: ["Joker"],
+      selectedColor: "Joker",
       reviews: [5, 4, 5, 4],
       type :"Tactile"
      },
     {
       id: 19,
-      name: "Copper switch",
+      name: "Special Pumpkin switch",
       images: {
-        Copper: "/images/swi18.jpg",
+        Pumpkin: "/images/swi18.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
-      availableColors: ["Copper"],
-      selectedColor: "Copper",
+      availableColors: ["Pumpkin"],
+      selectedColor: "Pumpkin",
       reviews: [5, 4, 5, 4],
       type :"Tactile"
      },
     {
       id: 20,
-      name: "Bronze switch",
+      name: "Special Blurbrrry switch",
       images: {
-        Bronze: "/images/swi19.webp",
+        Blueberry: "/images/swi19.webp",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
-      availableColors: ["Bronze"],
-      selectedColor: "Bronze",
+      availableColors: ["Blueberry"],
+      selectedColor: "Blueberry",
       reviews: [5, 4, 5, 4],
       type :"Tactile"
      },
