@@ -16,12 +16,20 @@ const SwitchModal = ({
       ? (Switch.reviews.reduce((acc, cur) => acc + cur, 0) / Switch.reviews.length).toFixed(1)
       : "No reviews";
 
+  const currentImageSrc = Switch.images[selectedColor];
+  const currentAltText = `${Switch.name} - ${selectedColor}`;
+  
   return (
     <div className="modal-overlay">
       <div className="modal-content">
         <button className="close-button" onClick={onClose}>X</button>
         <h2>{Switch.name}</h2>
-        <img src={Switch.images[Switch.selectedColor]} alt={`${Switch.name} - ${Switch.selectedColor}`} className="modal-image" />
+        <img
+          src={currentImageSrc}
+          alt={currentAltText}
+          className="modal-image"
+          style={{ objectFit: 'contain' }}
+        />
         <p>{Switch.description}</p>
         <p className="Switch-price">${Switch.price}</p>
         <p className="Switch-rating">Rating: {averageRating}⭐</p>
