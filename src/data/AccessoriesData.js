@@ -30,7 +30,7 @@ export const accessoriesData = [
       id: 11,
       name: "Keyboard Wrist Rest",
       images: {
-        Black: "/images/keyrest.jpg"
+        Black: "/images/keyrest.jpeg"
       },
       description: "Designed for comfort and efficiency during long typing sessions.",
       price: 20,
@@ -43,8 +43,8 @@ export const accessoriesData = [
       id: 12,
       name: "Keyboard Shell",
       images: {
-        White: "/images/white_shell.jpg",
-        Black: "/images/black_shell.jpg"
+        White: "/images/white_shell.jpeg",
+        Black: "/images/black_shell.jpeg"
       },
       description: "With the intent of providing ownership of your very own 65% keyboard to your design, use our keyoard shell for that first step.",
       price: 90,
