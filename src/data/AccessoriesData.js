@@ -1,6 +1,6 @@
 export const accessoriesData = [
     {
-      id: 9,
+      id: 200,
       name: "Mechanical Keyboard Cleaner Kit",
       images: {
         Standard: "/images/mech_black.webp",
@@ -11,10 +11,10 @@ export const accessoriesData = [
       availableColors: ["Standard"],
       selectedColor: "Standard",
       reviews: [5, 4, 5, 4],
-      connectivity: "DNE",
+      connectivity: "Physical",
     },
     {
-      id: 10,
+      id: 201,
       name: "Headset stand",
       images: {
         Black: "/images/headset_stand.jpeg",
@@ -24,35 +24,251 @@ export const accessoriesData = [
       availableColors: ["Black"],
       selectedColor: "Black",
       reviews: [5, 4, 5, 5],
-      connectivity: "DNE"
+      connectivity: "Physical",
+      type: "Storage"
     },
     {
-      id: 11,
+      id: 202,
       name: "Keyboard Wrist Rest",
       images: {
-        Black: "/images/keyrest.jpg"
+        Black: "/images/wristrest.webp"
       },
       description: "Designed for comfort and efficiency during long typing sessions.",
-      price: 20,
+      price: 15,
       availableColors:  ["Black"],
       selectedColor: "Black",
       reviews: [4, 4, 4, 4],
-      connectivity: "Clips"
+      connectivity: "Physical",
+      type: "Comfort"
+
     },
     {
-      id: 12,
-      name: "Keyboard Shell",
+      id: 203,
+      name: "Keyboard Case",
       images: {
-        White: "/images/white_shell.jpg",
+        White: "/images/keyboardcase.jpg",
         Black: "/images/black_shell.jpg"
       },
       description: "With the intent of providing ownership of your very own 65% keyboard to your design, use our keyoard shell for that first step.",
-      price: 90,
+      price: 20,
       availableColors: ["White", "Black"],
       selectedColor: "White",
       reviews: [4, 3, 4, 5],
-      connectivity: "User choice"
+      connectivity: "User choice",
+      type: "Storage"
 
+    },
+    {
+      id: 204,
+      name: "Switch Puller",
+      images: {
+        Standard: "/images/switchpuller.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 5,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Cleaning"
+    },
+    {
+      id: 205,
+      name: "Keycap Puller",
+      images: {
+        Standard: "/images/keycappull.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 5,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Cleaning"
+    },
+    {
+      id: 206,
+      name: "Switch Tester",
+      images: {
+        Standard: "/images/tester.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 10,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Testing"
+    },
+
+    {
+      id: 208,
+      name: "Cable",
+      images: {
+        Standard: "/images/cable.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 6,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Wired",
+      type: "Connectivity"
+    },
+    {
+      id: 209,
+      name: "Mousepad",
+      images: {
+        Standard: "/images/mousepad.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 20,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Comfort"
+    },
+    {
+      id: 210,
+      name: "Mouse",
+      images: {
+        Standard: "/images/mouse.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 10,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "USB",
+      type: "Connectivity"
+    },
+    {
+      id: 211,
+      name: "Headset",
+      images: {
+        Standard: "/images/headset.png",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 40,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Wired",
+      type: "Connectivity"
+    },
+    {
+      id: 212,
+      name: "Monitor",
+      images: {
+        Standard: "/images/monitor.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 80,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Connectivity"
+    },
+    {
+      id: 213,
+      name: "Keyboard Stand",
+      images: {
+        Standard: "/images/keyboardstand.webp",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 35,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
+    },
+    {
+      id: 215,
+      name: "Monitor Stand",
+      images: {
+        Standard: "/images/monitorstand.webp",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price:25,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
+    },
+    {
+      id: 216,
+      name: "Cable Management Clip",
+      images: {
+        Standard: "/images/cableclip.avif",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 6,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
+    },
+    {
+      id: 217,
+      name: "Cable Management Sleeve",
+      images: {
+        Standard: "/images/cablesleeve2.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 10,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
+    },
+    {
+      id: 218,
+      name: "Cable Management Box",
+      images: {
+        Standard: "/images/cablebox2.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 12,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
+    },
+    {
+      id: 219,
+      name: "Cable Management Sleeve",
+      images: {
+        Standard: "/images/cablesleeve.jpg",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 10,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
+    },
+    {
+      id: 220,
+      name: "Cable Management Box",
+      images: {
+        Standard: "/images/cablebox.avif",
+      },
+      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      price: 12,
+      availableColors: ["Standard"],
+      selectedColor: "Standard",
+      reviews: [5, 4, 5, 4],
+      connectivity: "Physical",
+      type: "Storage"
     }
+    
   ];
   
