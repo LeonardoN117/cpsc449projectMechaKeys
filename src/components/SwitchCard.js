@@ -9,12 +9,13 @@ const SwitchCard = ({ switchItem, onClick }) => {
 
   return (
     <div className="switch-card" onClick={() => onClick(switchItem)}>
-      <img
+      <div className='image-container'>
+        <img
         src={switchItem.images[switchItem.selectedColor]}
         alt={`${switchItem.name} - ${switchItem.selectedColor}`}
         className="switch-image"
-      />
-
+        />
+      </div>
       <div className="switch-details">
         <h2>{switchItem.name}</h2>
         <p className="switch-price">${switchItem.price.toFixed(2)}</p>

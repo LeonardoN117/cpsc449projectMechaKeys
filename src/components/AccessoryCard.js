@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/SwitchesPage.css';
+import '../styles/AccessoriesPage.css';
 
 const AccessoryCard = ({ accessory, onClick }) => {
   const averageRating =
@@ -8,18 +8,19 @@ const AccessoryCard = ({ accessory, onClick }) => {
       : "No reviews";
 
   return (
-    <div className="switch-card" onClick={() => onClick(accessory)}>
-      <img
-        src={accessory.images[accessory.selectedColor]}
-        alt={`${accessory.name} - ${accessory.selectedColor}`}
-        className="switch-image"
-      />
-
-      <div className="switch-details">
+    <div className="accessory-card" onClick={() => onClick(accessory)}>
+      <div className='image-container'>
+        <img
+          src={accessory.images[accessory.selectedColor]}
+          alt={`${accessory.name} - ${accessory.selectedColor}`}
+          className="accessory-image"
+        />
+      </div>
+      <div className="accessory-details">
         <h2>{accessory.name}</h2>
-        <p className="switch-price">${accessory.price.toFixed(2)}</p>
-        <p className="switch-type">Type: {accessory.type}</p>
-        <p className="switch-rating">Rating: {averageRating}⭐</p>
+        <p className="accessory-price">${accessory.price.toFixed(2)}</p>
+        <p className="accessory-type">Type: {accessory.type}</p>
+        <p className="accessory-rating">Rating: {averageRating}⭐</p>
       </div>
     </div>
   );

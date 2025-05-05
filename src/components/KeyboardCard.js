@@ -9,11 +9,12 @@ const KeyboardCard = ({ keyboard, onClick }) => {
 
   return (
     <div className="keyboard-card" onClick={() => onClick(keyboard)}>
-      <img
-        src={keyboard.images[keyboard.selectedColor]}
-        alt={`${keyboard.name} - ${keyboard.selectedColor}`}
-        className="keyboard-image" />
-
+      <div className='image-container'>
+        <img
+          src={keyboard.images[keyboard.selectedColor]}
+          alt={`${keyboard.name} - ${keyboard.selectedColor}`}
+          className="keyboard-image" />
+      </div>
       <div className="keyboard-details">
         <h2>{keyboard.name}</h2>
         <p className="keyboard-price">${keyboard.price}</p>
