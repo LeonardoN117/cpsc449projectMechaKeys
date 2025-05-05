@@ -1,6 +1,10 @@
 export const accessoriesData = [
     {
+<<<<<<< HEAD
       id: 200,
+=======
+      id: 9,
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Mechanical Keyboard Cleaner Kit",
       images: {
         Standard: "/images/mech_black.webp",
@@ -14,7 +18,11 @@ export const accessoriesData = [
       connectivity: "DNE",
     },
     {
+<<<<<<< HEAD
       id: 201,
+=======
+      id: 10,
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Headset stand",
       images: {
         Black: "/images/headset_stand.jpeg",
@@ -27,7 +35,11 @@ export const accessoriesData = [
       connectivity: "DNE"
     },
     {
+<<<<<<< HEAD
       id: 202,
+=======
+      id: 11,
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Keyboard Wrist Rest",
       images: {
         Black: "/images/keyrest.jpg"
@@ -40,8 +52,13 @@ export const accessoriesData = [
       connectivity: "Clips"
     },
     {
+<<<<<<< HEAD
       id: 203,
       name: "Keyboard Case",
+=======
+      id: 12,
+      name: "Keyboard Shell",
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       images: {
         White: "/images/white_shell.jpg",
         Black: "/images/black_shell.jpg"
@@ -53,6 +70,7 @@ export const accessoriesData = [
       reviews: [4, 3, 4, 5],
       connectivity: "User choice"
 
+<<<<<<< HEAD
     },
     {
       id: 204,
@@ -276,5 +294,8 @@ export const accessoriesData = [
       connectivity: "DNE"
     }
     
+=======
+    }
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
   ];
   

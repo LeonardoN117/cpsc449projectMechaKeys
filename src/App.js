@@ -7,9 +7,12 @@ import SignupPage from "./Pages/Signup";
 import SwitchPage from "./Pages/Switche";
 import CartPage from "./Pages/Cart";
 import AccessoriesPage from "./Pages/AccessoriesPage";
+<<<<<<< HEAD
 import SettingsPage from "./Pages/Settings";
 import OrderHistoryPage from "./Pages/OrderHistory";
 import { supabase } from "./data/supabaseClient";
+=======
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
 import "./styles/App.css";
 
 function AppContent() {
@@ -138,12 +141,44 @@ function AppContent() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="App-layout">
       <nav className="navbar">
         <div className="logo">
           <Link to="/">
             <img src="/images/logo.png" alt="MechaKeys Logo" />
           </Link>
+=======
+    <Router>
+      <div className="App-layout">
+        <nav className="navbar">
+          <div className="logo">
+            <Link to="/">
+              <img src="/images/logo.png" alt="MechaKeys Logo" />            
+            </Link>
+          </div>
+          <h2>MechaKeys</h2>
+          <div className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/keyboard">Keyboards</Link>
+            <Link to="/switches">Switches</Link>
+            <Link to="/accessories">Accessories</Link>
+            <Link to="/cart">Cart</Link>
+            <Link to="/login">Login</Link>
+          </div>
+        </nav>
+
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<HomePage />} />          
+            <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} orders={orders} setOrders={setOrders} />} />
+            <Route path="/switches" element={<SwitchPage addToCart={addToCart} orders={orders} setOrders={setOrders}/>} />
+            <Route path="/accessories" element={<AccessoriesPage addToCart={addToCart} orders={orders} setOrders={setOrders}/>} />
+            <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} handleCheckout={handleCheckout} />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+          </Routes>
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
         </div>
         <h2>MechaKeys</h2>
         <div className="nav-links">

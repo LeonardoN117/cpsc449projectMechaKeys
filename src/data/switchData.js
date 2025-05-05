@@ -2,7 +2,11 @@ export const switchData = [
     
     
     {
+<<<<<<< HEAD
       id: 205,
+=======
+      id: 5,
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Blue switch",
       images: {
         Blue: "/images/switch3.jpg",
@@ -15,7 +19,11 @@ export const switchData = [
       type :"Tactile"
     },
     {
+<<<<<<< HEAD
       id: 206,
+=======
+      id: 6,
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Teal switch",
       images: {
         Teal: "/images/switch2.webp",
@@ -29,7 +37,11 @@ export const switchData = [
 
      },
     {
+<<<<<<< HEAD
       id: 207,
+=======
+      id: 7,
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
       name: "Black Switch  ",
       images: {
         Black: "/images/switch4.jpg",

@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { supabase } from "../data/supabaseClient";
+=======
+import React, { useState } from "react";
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
 import "../styles/AccessoriesPage.css";
 import { accessoriesData } from "../data/AccessoriesData";
 import Filters from "../components/Filters";
 import AccessoryCard from "../components/AccessoryCard";
 import AccessoryModal from "../components/AccessoryModal";
 
+<<<<<<< HEAD
 function AccessoriesPage({ addToCart, user }) {
+=======
+function AccessoriesPage({ addToCart, orders, setOrders }) {
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
   const [accessories, setAccessories] = useState(accessoriesData);
   const [selectedAccessory, setSelectedAccessory] = useState(null);
   const [selectedColor, setSelectedColor] = useState("");
@@ -68,6 +76,7 @@ function AccessoriesPage({ addToCart, user }) {
   };
 
   // The user can review if the selected switch appears in their orders
+<<<<<<< HEAD
   const [canReview, setCanReview] = useState(false);
 
 useEffect(() => {
@@ -86,6 +95,11 @@ useEffect(() => {
   checkIfOrdered();
 }, [selectedAccessory, user]);
 
+=======
+  const canReview = selectedAccessory
+    ? orders.some((order) => order.id === selectedAccessory.id)
+    : false;
+>>>>>>> 39a2fa261df41dd6d1832f3525782d49d7dad892
 
   return (
     <div className="accessory-page">
