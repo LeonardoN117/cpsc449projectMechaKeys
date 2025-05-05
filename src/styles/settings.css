@@ -1,0 +1,33 @@
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #212177;
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.settings-container p {
+    margin: 10px 0;
+}
+.settings-container form {
+    height : auto;
+}
+
+.settings-container input {
+    margin: 10px;
+    width: 50%;
+    height: 20px;
+}
+
+.settings-container button {
+    background-color: #15023e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 50%;
+    margin: 20px 0;
+    cursor: pointer;
+}
