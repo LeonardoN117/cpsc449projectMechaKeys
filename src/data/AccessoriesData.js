@@ -64,7 +64,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/switchpuller.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "Be cabeable of cleaning your switches and keyboard.",
       price: 5,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -78,7 +78,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/keycappull.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "Be cabeable of cleaning your keycaps and keyboard.",
       price: 5,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -92,7 +92,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/tester.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A box with multiple spaces to see whitch switch best suits you.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -105,9 +105,9 @@ export const accessoriesData = [
       id: 208,
       name: "Cable",
       images: {
-        Standard: "/images/cable.jpg",
+        Standard: "/images/tui.webp",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "Best way to connect your devices.",
       price: 6,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -121,7 +121,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/mousepad.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "To protect your mouse and desk surface from scratches.",
       price: 20,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -135,7 +135,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/mouse.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "The best way to traverse the computer.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -149,7 +149,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/headset.png",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "Being able to hear your work and play in the best quality possible.",
       price: 40,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -161,9 +161,9 @@ export const accessoriesData = [
       id: 212,
       name: "Monitor",
       images: {
-        Standard: "/images/monitor.jpg",
+        Standard: "/images/desktop.webp",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "To view your work and play in the best quality possible.",
       price: 80,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -177,7 +177,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/keyboardstand.webp",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A stand to keep multiple keyboards in one neat tower.",
       price: 35,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -191,7 +191,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/monitorstand.webp",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A stand for your monitor to help keep your desk organized.",
       price:25,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -205,7 +205,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/cableclip.avif",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A clip to help keep the cable clutter away.",
       price: 6,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -219,7 +219,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/cablesleeve2.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A sleeve to help keep the clutter away.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -233,7 +233,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/cablebox2.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A box to help keep the clutter away..",
       price: 12,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -247,7 +247,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/cablesleeve.jpg",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A sleeve to help keep the clutter away.",
       price: 10,
       availableColors: ["Standard"],
       selectedColor: "Standard",
@@ -261,7 +261,7 @@ export const accessoriesData = [
       images: {
         Standard: "/images/cablebox.avif",
       },
-      description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
+      description: "A box to help keep the clutter away.",
       price: 12,
       availableColors: ["Standard"],
       selectedColor: "Standard",
