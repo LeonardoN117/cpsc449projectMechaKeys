@@ -21,7 +21,7 @@ const SwitchModal = ({
       <div className="modal-content">
         <button className="close-button" onClick={onClose}>X</button>
         <h2>{Switch.name}</h2>
-        <img src={Switch.image} alt={Switch.name} className="modal-image" />
+        <img src={Switch.images[Switch.selectedColor]} alt={`${Switch.name} - ${Switch.selectedColor}`} className="modal-image" />
         <p>{Switch.description}</p>
         <p className="Switch-price">${Switch.price}</p>
         <p className="Switch-rating">Rating: {averageRating}⭐</p>

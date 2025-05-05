@@ -21,7 +21,7 @@ const KeyboardModal = ({
       <div className="modal-content">
         <button className="close-button" onClick={onClose}>X</button>
         <h2>{keyboard.name}</h2>
-        <img src={keyboard.image} alt={keyboard.name} className="modal-image" />
+        <img src={keyboard.images[keyboard.selectedColor]} alt={`${keyboard.name} - ${keyboard.selectedColor}`} className="modal-image" />
         <p>{keyboard.description}</p>
         <p className="keyboard-price">${keyboard.price}</p>
         <p className="keyboard-rating">Rating: {averageRating}⭐</p>

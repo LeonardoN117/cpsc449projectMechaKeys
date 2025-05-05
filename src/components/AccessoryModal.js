@@ -21,7 +21,7 @@ const AccessoryModal = ({
             <div className="modal-content">
                 <button className="close-button" onClick={onClose}>X</button>
                 <h2>{accessory.name}</h2>
-                <img src={accessory.image} alt={accessory.name} className="modal-image" />
+                <img src={accessory.images[accessory.selectedColor]} alt={`${accessory.name} - ${accessory.selectedColor}`} className="modal-image" />
                 <p>{accessory.description}</p>
                 <p className="accessory-price">${accessory.price}</p>
                 <p className="accessory-rating">Rating: {averageRating}⭐</p>
