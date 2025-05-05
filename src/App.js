@@ -9,8 +9,15 @@ import CartPage from "./Pages/Cart";
 import AccessoriesPage from "./Pages/AccessoriesPage";
 import SettingsPage from "./Pages/Settings";
 import OrderHistoryPage from "./Pages/OrderHistory";
+import OrderSuccessPage from "./Pages/OrderSuccessPage";
 import { supabase } from "./data/supabaseClient";
+import { loadStripe } from "@stripe/stripe-js";
+import Stripe from "stripe";
 import "./styles/App.css";
+import { STRIPE_KEYS } from "./data/stripeKeys";
+
+const stripeServer = new Stripe(STRIPE_KEYS[0].SECRET_KEY);
+const stripePromise = loadStripe(STRIPE_KEYS[0].PUBLISHABLE_KEY);
 
 function AppContent() {
   const [cart, setCart] = useState([]);
@@ -22,6 +29,8 @@ function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
   const hideFooter = ["/login", "/signup", "/settings"].includes(location.pathname);
+
+  
 
   useEffect(() => {
     const fetchUserAndOrders = async () => {
@@ -96,37 +105,85 @@ function AppContent() {
   };
 
   const handleCheckout = async () => {
-    if (cart.length === 0 || !user) {
-      alert("Your cart is empty or you're not logged in.");
-      return;
+    if (!cart || cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+    if (!user) {
+        alert("Please log in to check out.");
+        navigate('/login');
+        return;
     }
 
-    const orderPromises = cart.map((item) =>
-      supabase.from("orders").insert({
-        user_id: user.id,
-        product_name: item.name,
-        selected_color: item.selectedColor,
-        quantity: item.quantity,
-        price: item.price
-      })
-    );
+    // Format cart items for Stripe
+    let line_items;
+    try {
+        line_items = cart.map(item => {
+            if (typeof item.price !== 'number' || item.price <= 0) {
+                console.error("Invalid price for item:", item);
+                throw new Error(`Invalid or missing price for item: ${item.name}. Please check cart data.`);
+            }
+              if (typeof item.quantity !== 'number' || item.quantity <= 0) {
+                console.error("Invalid quantity for item:", item);
+                  throw new Error(`Invalid or missing quantity for item: ${item.name}.`);
+            }
+            return {
+                price_data: {
+                    currency: 'usd',
+                    product_data: {
+                        name: `${item.name} (${item.selectedColor || 'Default'})`,
+                    },
+                    unit_amount: Math.round(item.price * 100),
+                },
+                quantity: item.quantity,
+            };
+        });
+    } catch (error) {
+        alert(`Checkout Error: ${error.message}`);
+        console.error("Error formatting line items:", error);
+        return;
+    }
 
-    const results = await Promise.all(orderPromises);
-    const errors = results.filter(r => r.error);
+    const success_url = `${window.location.origin}/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
+    const cancel_url = `${window.location.origin}/cart`;
 
-    if (errors.length > 0) {
-      console.error("Some errors occurred:", errors);
-      alert("Some orders failed. Please try again.");
-    } else {
-      setCart([]);
-      alert("Checkout successful! Your order has been placed.");
+    try {
+        // Create Stripe session
+        console.log("Creating Stripe session with line items:", JSON.stringify(line_items, null, 2));
+        const session = await stripeServer.checkout.sessions.create({
+            payment_method_types: ['card'],
+            line_items: line_items,
+            mode: 'payment',
+            success_url: success_url,
+            cancel_url: cancel_url,
+            metadata: {
+                userId: user.id,
+            },
+        });
+        console.log("Stripe session created:", session.id);
 
-      const { data: updatedOrders } = await supabase
-        .from("orders")
-        .select("*")
-        .eq("user_id", user.id);
 
-      setOrders(updatedOrders || []);
+        // Redirect to Stripe Checkout
+        const stripe = await stripePromise;
+          if (!stripe) {
+            throw new Error("Stripe.js failed to load.");
+        }
+        const { error: stripeError } = await stripe.redirectToCheckout({
+            sessionId: session.id,
+        });
+
+        if (stripeError) {
+            console.error("Stripe redirection error:", stripeError);
+            alert(`Could not redirect to checkout: ${stripeError.message}`);
+        }
+
+    } catch (error) {
+        console.error('Stripe Session Creation/Redirection Error:', error);
+          if (error.type === 'StripeInvalidRequestError') {
+            alert(`Checkout failed: Invalid data sent to Stripe. ${error.message}`);
+          } else {
+            alert(`Checkout failed: ${error.message || 'Could not create Stripe session.'}`);
+          }
     }
   };
 
@@ -185,6 +242,7 @@ function AppContent() {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/orderHistory" element={<OrderHistoryPage orders={orders} />} />
+          <Route path="/orderSuccess" element={<OrderSuccessPage cart={[]} user={user} />} />
         </Routes>
       </div>
 

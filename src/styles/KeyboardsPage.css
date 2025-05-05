@@ -160,14 +160,26 @@
 
 .modal-content {
   background: rgb(25, 4, 93);
-  padding: 20px;
+  padding: 10px;
   color: white;
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
+  max-height: 95vh; /* Limits the height */
+  overflow-y: auto;  /* Enables vertical scrolling */
   position: relative;
   text-align: center;
 }
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
 
 .close-button {
   position: absolute;
@@ -183,8 +195,8 @@
 }
 
 .modal-image {
-  width: 100%;
-  height: 200px;
+  width: 20%;
+  height: 100px;
   object-fit: cover;
   margin-bottom: 15px;
 }
