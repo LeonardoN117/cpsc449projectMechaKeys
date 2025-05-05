@@ -105,7 +105,7 @@ export const accessoriesData = [
       id: 208,
       name: "Cable",
       images: {
-        Standard: "/images/tui.webp",
+        Standard: "/images/cable.jpg",
       },
       description: "Best way to connect your devices.",
       price: 6,
@@ -161,7 +161,7 @@ export const accessoriesData = [
       id: 212,
       name: "Monitor",
       images: {
-        Standard: "/images/desktop.webp",
+        Standard: "/images/monitor.jpg",
       },
       description: "To view your work and play in the best quality possible.",
       price: 80,
