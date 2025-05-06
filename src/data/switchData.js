@@ -3,7 +3,7 @@ export const switchData = [
     
     {
       id: 205,
-      name: "Blue switch",
+      name: "Blue Switch",
       images: {
         Blue: "/images/switch3.jpg",
       },
@@ -16,7 +16,7 @@ export const switchData = [
     },
     {
       id: 206,
-      name: "Teal switch",
+      name: "Teal Switch",
       images: {
         Teal: "/images/switch2.webp",
       },
@@ -44,12 +44,12 @@ export const switchData = [
      },
     {
       id: 8,
-      name: "Brown switch",
+      name: "Brown Switch",
       images: {
         Brown: "/images/switch5.jpg",
 
       },
-      description: "Tacticle yet a quiete switch with some mild bump feedback.",
+      description: "Tacticle yet a quiet Switch with some mild bump feedback.",
       price: 2.50,
       availableColors: ["Brown"],
       selectedColor: "Brown",
@@ -58,7 +58,7 @@ export const switchData = [
      },
     {
       id: 9,
-      name: "Red switch",
+      name: "Red Switch",
       images: {
         Red: "/images/switch1.jpg",
       },
@@ -71,7 +71,7 @@ export const switchData = [
      },
     {
       id: 10,
-      name: "Yellow switch",
+      name: "Yellow Switch",
       images: {
         Yellow: "/images/yelloww.webp",
       },
@@ -84,7 +84,7 @@ export const switchData = [
      },
     {
       id: 11,
-      name: "Clear switch",
+      name: "Clear Switch",
       images: {
         Clear: "/images/swi7.jpg",
       },
@@ -97,7 +97,7 @@ export const switchData = [
      },
     {
       id: 12,
-      name: "Pure Green switch",
+      name: "Pure Green Switch",
       images: {
         Green: "/images/swi8.webp",
       },
@@ -110,7 +110,7 @@ export const switchData = [
      },
     {
       id: 13,
-      name: "Pink switch",
+      name: "Pink Switch",
       images: {
         Pink: "/images/swi9.png",
       },
@@ -123,7 +123,7 @@ export const switchData = [
      },
     {
       id: 14,
-      name: "Yellow switch plus",
+      name: "Yellow Switch Plus",
       images: {
         Yellow: "/images/swi10.webp",
       },
@@ -136,7 +136,7 @@ export const switchData = [
      },
     {
       id: 15,
-      name: "Pure Black switch",
+      name: "Pure Black Switch",
       images: {
         Black: "/images/swi11.jpg",
       },
@@ -149,7 +149,7 @@ export const switchData = [
      },
     {
       id: 16,
-      name: "Dull switch",
+      name: "Dull Switch",
       images: {
         Dull: "/images/swi12.jpg",
       },
@@ -162,7 +162,7 @@ export const switchData = [
      },
     {
       id: 17,
-      name: "Gold switch",
+      name: "Gold Switch",
       images: {
         Gold: "/images/swi13.jpg",
       },
@@ -175,7 +175,7 @@ export const switchData = [
      },
     {
       id: 18,
-      name: "Joker switch",
+      name: "Joker Switch",
       images: {
         Joker: "/images/swi14.jpg",
       },
@@ -188,7 +188,7 @@ export const switchData = [
      },
     {
       id: 19,
-      name: "Special Pumpkin switch",
+      name: "Special Pumpkin Switch",
       images: {
         Pumpkin: "/images/swi18.jpg",
       },
@@ -201,7 +201,7 @@ export const switchData = [
      },
     {
       id: 20,
-      name: "Special Blurbrrry switch",
+      name: "Special Blurbrrry Switch",
       images: {
         Blueberry: "/images/swi19.webp",
       },

@@ -10,8 +10,15 @@ const Cart = ({ cart, onRemoveFromCart, onCheckout }) => (
       <>
         <ul>
           {cart.map((item, index) => (
-            <li key={index}>
-              {item.name} - {item.selectedColor} - ${item.price} x {item.quantity}
+            <li key={index} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <img
+                src={item.images?.[item.selectedColor] || "/images/logo.png"}
+                alt={item.name}
+                style={{ width: "60px", height: "60px", objectFit: "contain" }}
+              />
+              <span>
+                {item.name} - {item.selectedColor} - ${item.price} x {item.quantity}
+              </span>
               <button onClick={() => onRemoveFromCart(item.id, item.selectedColor)}>
                 Remove
               </button>

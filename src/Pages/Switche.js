@@ -90,7 +90,7 @@ useEffect(() => {
   return (
     <div className="switch-page">
       <h1>Switches</h1>
-      <p>Browse our selection of high-quality Switch switches.</p>
+      <p>Browse our selection of high-quality Switches.</p>
 
       <Filters
         searchTerm={searchTerm}
