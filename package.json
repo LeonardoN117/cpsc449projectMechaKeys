@@ -2,6 +2,8 @@
   "name": "mechakeys",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://leonardon117.github.io/cpsc449projectMechaKeys"
+,
   "dependencies": {
     "@stripe/stripe-js": "^7.3.0",
     "@supabase/supabase-js": "^2.49.4",
@@ -20,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

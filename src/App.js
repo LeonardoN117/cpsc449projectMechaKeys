@@ -262,7 +262,7 @@ function AppContent() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/cpsc449projectMechaKeys">
       <AppContent />
     </Router>
   );
