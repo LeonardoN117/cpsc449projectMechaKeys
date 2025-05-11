@@ -12,7 +12,7 @@ const Cart = ({ cart, onRemoveFromCart, onCheckout }) => (
           {cart.map((item, index) => (
             <li key={index} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <img
-                src={item.images?.[item.selectedColor] || "/images/logo.png"}
+                src={item.images?.[item.selectedColor] || "images/logo.png"}
                 alt={item.name}
                 style={{ width: "60px", height: "60px", objectFit: "contain" }}
               />

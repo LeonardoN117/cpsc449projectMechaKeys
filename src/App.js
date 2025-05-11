@@ -199,7 +199,7 @@ function AppContent() {
       <nav className="navbar">
         <div className="logo">
           <Link to="/">
-            <img src="/images/logo.png" alt="MechaKeys Logo" />
+            <img src="images/logo.png" alt="MechaKeys Logo" />
           </Link>
         </div>
         <h2>MechaKeys</h2>
@@ -212,7 +212,7 @@ function AppContent() {
           {user ? (
             <div className="user-menu" ref={dropdownRef}>
               <img
-                src="/images/userIcon.svg"
+                src="images/userIcon.svg"
                 alt="User Icon"
                 className="user-icon"
                 onClick={() => setShowDropdown(!showDropdown)}
