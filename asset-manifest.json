@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/LeonardoN117/cpsc449projectMechaKeys.git/static/css/main.32c5d135.css",
+    "main.js": "/LeonardoN117/cpsc449projectMechaKeys.git/static/js/main.2b71655b.js",
+    "static/js/952.ce11bf41.chunk.js": "/LeonardoN117/cpsc449projectMechaKeys.git/static/js/952.ce11bf41.chunk.js",
+    "static/js/453.56f60091.chunk.js": "/LeonardoN117/cpsc449projectMechaKeys.git/static/js/453.56f60091.chunk.js",
+    "static/media/hero.jpg": "/LeonardoN117/cpsc449projectMechaKeys.git/static/media/hero.37d77ed65ec267634d37.jpg",
+    "index.html": "/LeonardoN117/cpsc449projectMechaKeys.git/index.html",
+    "main.32c5d135.css.map": "/LeonardoN117/cpsc449projectMechaKeys.git/static/css/main.32c5d135.css.map",
+    "main.2b71655b.js.map": "/LeonardoN117/cpsc449projectMechaKeys.git/static/js/main.2b71655b.js.map",
+    "952.ce11bf41.chunk.js.map": "/LeonardoN117/cpsc449projectMechaKeys.git/static/js/952.ce11bf41.chunk.js.map",
+    "453.56f60091.chunk.js.map": "/LeonardoN117/cpsc449projectMechaKeys.git/static/js/453.56f60091.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32c5d135.css",
+    "static/js/main.2b71655b.js"
+  ]
+}
