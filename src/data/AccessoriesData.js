@@ -3,7 +3,7 @@ export const accessoriesData = [
       id: 200,
       name: "Mechanical Keyboard Cleaner Kit",
       images: {
-        Standard: "/images/mech_black.webp",
+        Standard: "images/mech_black.webp",
 
       },
       description: "A cleaning kit eqipped with a cap remover and brush to dust off debris and dust.",
@@ -17,7 +17,7 @@ export const accessoriesData = [
       id: 201,
       name: "Headset stand",
       images: {
-        Black: "/images/headset_stand.jpeg",
+        Black: "images/headset_stand.jpeg",
       },
       description: "Perfect for gamers that need help keeping thier desk organized and headset in pristine condition.",
       price: 30,
@@ -31,7 +31,7 @@ export const accessoriesData = [
       id: 202,
       name: "Keyboard Wrist Rest",
       images: {
-        Black: "/images/wristrest.webp"
+        Black: "images/wristrest.webp"
       },
       description: "Designed for comfort and efficiency during long typing sessions.",
       price: 15,
@@ -46,8 +46,8 @@ export const accessoriesData = [
       id: 203,
       name: "Keyboard Case",
       images: {
-        White: "/images/keyboardcase.jpg",
-        Black: "/images/black_shell.jpg"
+        White: "images/keyboardcase.jpg",
+        Black: "images/black_shell.jpg"
       },
       description: "With the intent of providing ownership of your very own 65% keyboard to your design, use our keyoard shell for that first step.",
       price: 20,
@@ -62,7 +62,7 @@ export const accessoriesData = [
       id: 204,
       name: "Switch Puller",
       images: {
-        Standard: "/images/switchpuller.jpg",
+        Standard: "images/switchpuller.jpg",
       },
       description: "Be cabeable of cleaning your switches and keyboard.",
       price: 5,
@@ -76,7 +76,7 @@ export const accessoriesData = [
       id: 205,
       name: "Keycap Puller",
       images: {
-        Standard: "/images/keycappull.jpg",
+        Standard: "images/keycappull.jpg",
       },
       description: "Be cabeable of cleaning your keycaps and keyboard.",
       price: 5,
@@ -90,7 +90,7 @@ export const accessoriesData = [
       id: 206,
       name: "Switch Tester",
       images: {
-        Standard: "/images/tester.jpg",
+        Standard: "images/tester.jpg",
       },
       description: "A box with multiple spaces to see whitch switch best suits you.",
       price: 10,
@@ -105,7 +105,7 @@ export const accessoriesData = [
       id: 208,
       name: "Cable",
       images: {
-        Standard: "/images/cable.jpg",
+        Standard: "images/cable.jpg",
       },
       description: "Best way to connect your devices.",
       price: 6,
@@ -119,7 +119,7 @@ export const accessoriesData = [
       id: 209,
       name: "Mousepad",
       images: {
-        Standard: "/images/mousepad.jpg",
+        Standard: "images/mousepad.jpg",
       },
       description: "To protect your mouse and desk surface from scratches.",
       price: 20,
@@ -133,7 +133,7 @@ export const accessoriesData = [
       id: 210,
       name: "Mouse",
       images: {
-        Standard: "/images/mouse.jpg",
+        Standard: "images/mouse.jpg",
       },
       description: "The best way to traverse the computer.",
       price: 10,
@@ -147,7 +147,7 @@ export const accessoriesData = [
       id: 211,
       name: "Headset",
       images: {
-        Standard: "/images/headset.png",
+        Standard: "images/headset.png",
       },
       description: "Being able to hear your work and play in the best quality possible.",
       price: 40,
@@ -161,7 +161,7 @@ export const accessoriesData = [
       id: 212,
       name: "Monitor",
       images: {
-        Standard: "/images/monitor.jpg",
+        Standard: "images/monitor.jpg",
       },
       description: "To view your work and play in the best quality possible.",
       price: 80,
@@ -175,7 +175,7 @@ export const accessoriesData = [
       id: 213,
       name: "Keyboard Stand",
       images: {
-        Standard: "/images/keyboardstand.webp",
+        Standard: "images/keyboardstand.webp",
       },
       description: "A stand to keep multiple keyboards in one neat tower.",
       price: 35,
@@ -189,7 +189,7 @@ export const accessoriesData = [
       id: 215,
       name: "Monitor Stand",
       images: {
-        Standard: "/images/monitorstand.webp",
+        Standard: "images/monitorstand.webp",
       },
       description: "A stand for your monitor to help keep your desk organized.",
       price:25,
@@ -203,7 +203,7 @@ export const accessoriesData = [
       id: 216,
       name: "Cable Management Clip",
       images: {
-        Standard: "/images/cableclip.avif",
+        Standard: "images/cableclip.avif",
       },
       description: "A clip to help keep the cable clutter away.",
       price: 6,
@@ -217,7 +217,7 @@ export const accessoriesData = [
       id: 217,
       name: "Cable Management Sleeve",
       images: {
-        Standard: "/images/cablesleeve2.jpg",
+        Standard: "images/cablesleeve2.jpg",
       },
       description: "A sleeve to help keep the clutter away.",
       price: 10,
@@ -231,7 +231,7 @@ export const accessoriesData = [
       id: 218,
       name: "Cable Management Box",
       images: {
-        Standard: "/images/cablebox2.jpg",
+        Standard: "images/cablebox2.jpg",
       },
       description: "A box to help keep the clutter away..",
       price: 12,
@@ -245,7 +245,7 @@ export const accessoriesData = [
       id: 219,
       name: "Cable Management Sleeve",
       images: {
-        Standard: "/images/cablesleeve.jpg",
+        Standard: "images/cablesleeve.jpg",
       },
       description: "A sleeve to help keep the clutter away.",
       price: 10,
@@ -259,7 +259,7 @@ export const accessoriesData = [
       id: 220,
       name: "Cable Management Box",
       images: {
-        Standard: "/images/cablebox.avif",
+        Standard: "images/cablebox.avif",
       },
       description: "A box to help keep the clutter away.",
       price: 12,

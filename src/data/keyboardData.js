@@ -3,9 +3,9 @@ export const keyboardsData = [
     id: 1,
     name: "Mechanical Keyboard Pro",
     images: {
-      Black: "/images/mech_black.webp",
-      White: "/images/mech_white.webp",
-      Red: "/images/mech_red.jpegebp"
+      Black: "images/mech_black.webp",
+      White: "images/mech_white.webp",
+      Red: "images/mech_red.jpegebp"
     },
     description: "A high-quality gaminganical keyboard with customizable RGB lighting.",
     price: 120,
@@ -18,9 +18,9 @@ export const keyboardsData = [
     id: 2,
     name: "Gaming Keyboard X",
     images: {
-      Black: "/images/gaming_black.webp",
-      Blue: "/images/gaming_blue.webp",
-      Green: "/images/game_green.webp"
+      Black: "images/gaming_black.webp",
+      Blue: "images/gaming_blue.webp",
+      Green: "images/game_green.webp"
     },
     description: "Perfect for gamers with fast response times and dynamic backlighting.",
     price: 150,
@@ -33,8 +33,8 @@ export const keyboardsData = [
     id: 3,
     name: "Ergonomic Keyboard",
     images: {
-      Gray: "/images/ergo_gray.webp",
-      Black: "/images/ergo_black.jpg"
+      Gray: "images/ergo_gray.webp",
+      Black: "images/ergo_black.jpg"
     },
     description: "Designed for comfort and efficiency during long typing sessions.",
     price: 100,
@@ -47,8 +47,8 @@ export const keyboardsData = [
     id: 4,
     name: "Wireless Keyboard",
     images: {
-      White: "/images/wireless_white.webp",
-      Black: "/images/wireless_black.webp"
+      White: "images/wireless_white.webp",
+      Black: "images/wireless_black.webp"
     },
     description: "Sleek, wireless, and portable keyboard with long battery life.",
     price: 90,
@@ -61,8 +61,8 @@ export const keyboardsData = [
     id: 105,
     name: "Compact Keyboard",
     images: {
-      Pink: "/images/image14.jpg",
-      Blue: "/images/compact_blue.webp"
+      Pink: "images/image14.jpg",
+      Blue: "images/compact_blue.webp"
     },
     description: "A compact keyboard perfect for travel and small spaces.",
     price: 80,
@@ -75,8 +75,8 @@ export const keyboardsData = [
     id: 106,
     name: "RGB Gaming Keyboard",
     images: {
-      Black: "/images/image15.jpg",
-      White: "/images/rgb_white.webp"
+      Black: "images/image15.jpg",
+      White: "images/rgb_white.webp"
     },
     description: "A gaming keyboard with customizable RGB lighting and macro keys.",
     price: 130,
@@ -89,8 +89,8 @@ export const keyboardsData = [
     id: 107,
     name: "Mechanical Gaming Keyboard",
     images: {
-      Black: "/images/image16.jpg",
-      Blue: "/images/mech_gaming_blue.webp"
+      Black: "images/image16.jpg",
+      Blue: "images/mech_gaming_blue.webp"
     },
     description: "A mechanical gaming keyboard with customizable RGB lighting.",
     price: 140,
@@ -103,8 +103,8 @@ export const keyboardsData = [
     id: 108,
     name: "Silent Keyboard",
     images: {
-      Gray: "/images/image3.jpg",
-      Black: "/images/silent_black.webp"
+      Gray: "images/image3.jpg",
+      Black: "images/silent_black.webp"
     },
     description: "A quiet keyboard perfect for office use.",
     price: 70,
@@ -117,8 +117,8 @@ export const keyboardsData = [
     id: 109,
     name: "Gaming Keyboard Elite",
     images: {
-      Black: "/images/image22.webp",
-      Red: "/images/gaming_elite_red.webp"
+      Black: "images/image22.webp",
+      Red: "images/gaming_elite_red.webp"
     },
     description: "An elite gaming keyboard with customizable RGB lighting and macro keys.",
     price: 160,
@@ -131,8 +131,8 @@ export const keyboardsData = [
     id: 110,
     name: "Mechanical Keyboard Lite",
     images: {
-      White: "/images/image11.jpg",
-      Gray: "/images/mech_lite_gray.webp"
+      White: "images/image11.jpg",
+      Gray: "images/mech_lite_gray.webp"
     },
     description: "A lightweight mechanical keyboard for easy portability.",
     price: 110,
@@ -145,8 +145,8 @@ export const keyboardsData = [
     id: 111,
     name: "Gaming Keyboard Pro",
     images: {
-      Black: "/images/image10.jpg",
-      Blue: "/images/gaming_pro_blue.webp"
+      Black: "images/image10.jpg",
+      Blue: "images/gaming_pro_blue.webp"
     },
     description: "A professional gaming keyboard with customizable RGB lighting.",
     price: 150,
@@ -159,8 +159,8 @@ export const keyboardsData = [
     id: 112,
     name: "Wireless Gaming Keyboard",
     images: {
-      Black: "/images/image9.webp",
-      White: "/images/wireless_gaming_white.webp"
+      Black: "images/image9.webp",
+      White: "images/wireless_gaming_white.webp"
     },
     description: "A wireless gaming keyboard with long battery life.",
     price: 120,
@@ -173,8 +173,8 @@ export const keyboardsData = [
     id: 113,
     name: "Mechanical Keyboard RGB",
     images: {
-      Black: "/images/image8.webp",
-      White: "/images/mech_rgb_white.webp"
+      Black: "images/image8.webp",
+      White: "images/mech_rgb_white.webp"
     },
     description: "A mechanical keyboard with customizable RGB lighting.",
     price: 130,
@@ -187,8 +187,8 @@ export const keyboardsData = [
     id: 114,
     name: "Compact Gaming Keyboard",
     images: {
-      Black: "/images/image7.png",
-      Blue: "/images/compact_gaming_blue.webp"
+      Black: "images/image7.png",
+      Blue: "images/compact_gaming_blue.webp"
     },
     description: "A compact gaming keyboard perfect for travel.",
     price: 90,
@@ -201,8 +201,8 @@ export const keyboardsData = [
     id: 115,
     name: "Ergonomic Gaming Keyboard",
     images: {
-      Gray: "/images/image6.avif",
-      Black: "/images/ergo_gaming_black.webp"
+      Gray: "images/image6.avif",
+      Black: "images/ergo_gaming_black.webp"
     },
     description: "An ergonomic gaming keyboard designed for comfort.",
     price: 110,
@@ -215,8 +215,8 @@ export const keyboardsData = [
     id: 116,
     name: "Wireless Mechanical Keyboard",
     images: {
-      Black: "/images/image5.webp",
-      White: "/images/wireless_mech_white.webp"
+      Black: "images/image5.webp",
+      White: "images/wireless_mech_white.webp"
     },
     description: "A wireless mechanical keyboard with customizable RGB lighting.",
     price: 140,
@@ -229,8 +229,8 @@ export const keyboardsData = [
     id: 117,
     name: "Gaming Keyboard RGB",
     images: {
-      Black: "/images/image1.jpg",
-      White: "/images/gaming_rgb_white.webp"
+      Black: "images/image1.jpg",
+      White: "images/gaming_rgb_white.webp"
     },
     description: "A gaming keyboard with customizable RGB lighting.",
     price: 130,
@@ -243,8 +243,8 @@ export const keyboardsData = [
     id: 118,
     name: "Mechanical Gaming Keyboard Pro",
     images: {
-      Black: "/images/image17.webp",
-      Blue: "/images/mech_gaming_pro_blue.webp"
+      Black: "images/image17.webp",
+      Blue: "images/mech_gaming_pro_blue.webp"
     },
     description: "A professional mechanical gaming keyboard with customizable RGB lighting.",
     price: 160,
@@ -257,8 +257,8 @@ export const keyboardsData = [
     id: 119,
     name: "Wireless Compact Keyboard",
     images: {
-      Pink: "/images/image34.webp",
-      Blue: "/images/wireless_compact_blue.webp"
+      Pink: "images/image34.webp",
+      Blue: "images/wireless_compact_blue.webp"
     },
     description: "A wireless compact keyboard perfect for travel.",
     price: 80,
@@ -271,8 +271,8 @@ export const keyboardsData = [
     id: 120,
     name: "Gaming Keyboard Elite Pro",
     images: {
-      Black: "/images/image2.webp",
-      Red: "/images/gaming_elite_pro_red.webp"
+      Black: "images/image2.webp",
+      Red: "images/gaming_elite_pro_red.webp"
     },
     description: "An elite gaming keyboard with customizable RGB lighting and macro keys.",
     price: 170,

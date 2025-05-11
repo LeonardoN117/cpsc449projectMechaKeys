@@ -5,7 +5,7 @@ export const switchData = [
       id: 205,
       name: "Blue Switch",
       images: {
-        Blue: "/images/switch3.jpg",
+        Blue: "images/switch3.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -18,7 +18,7 @@ export const switchData = [
       id: 206,
       name: "Teal Switch",
       images: {
-        Teal: "/images/switch2.webp",
+        Teal: "images/switch2.webp",
       },
       description: "Clicky and tactile like without having such loud clicks.",
       price: 4.00,
@@ -32,7 +32,7 @@ export const switchData = [
       id: 207,
       name: "Black Switch  ",
       images: {
-        Black: "/images/switch4.jpg",
+        Black: "images/switch4.jpg",
     
       },
       description: "Linear and smooth. There's no bump or click, just a smooth keystroke.",
@@ -46,7 +46,7 @@ export const switchData = [
       id: 8,
       name: "Brown Switch",
       images: {
-        Brown: "/images/switch5.jpg",
+        Brown: "images/switch5.jpg",
 
       },
       description: "Tacticle yet a quiet Switch with some mild bump feedback.",
@@ -60,7 +60,7 @@ export const switchData = [
       id: 9,
       name: "Red Switch",
       images: {
-        Red: "/images/switch1.jpg",
+        Red: "images/switch1.jpg",
       },
       description: "Linear and smooth. There's no bump or click, just a smooth keystroke.",
       price: 2.00,
@@ -73,7 +73,7 @@ export const switchData = [
       id: 10,
       name: "Yellow Switch",
       images: {
-        Yellow: "/images/yelloww.webp",
+        Yellow: "images/yelloww.webp",
       },
       description: "Linear and smooth. There's no bump or click, just a smooth keystroke.",
       price: 2.50,
@@ -86,7 +86,7 @@ export const switchData = [
       id: 11,
       name: "Clear Switch",
       images: {
-        Clear: "/images/swi7.jpg",
+        Clear: "images/swi7.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -99,7 +99,7 @@ export const switchData = [
       id: 12,
       name: "Pure Green Switch",
       images: {
-        Green: "/images/swi8.webp",
+        Green: "images/swi8.webp",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -112,7 +112,7 @@ export const switchData = [
       id: 13,
       name: "Pink Switch",
       images: {
-        Pink: "/images/swi9.png",
+        Pink: "images/swi9.png",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -125,7 +125,7 @@ export const switchData = [
       id: 14,
       name: "Yellow Switch Plus",
       images: {
-        Yellow: "/images/swi10.webp",
+        Yellow: "images/swi10.webp",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -138,7 +138,7 @@ export const switchData = [
       id: 15,
       name: "Pure Black Switch",
       images: {
-        Black: "/images/swi11.jpg",
+        Black: "images/swi11.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -151,7 +151,7 @@ export const switchData = [
       id: 16,
       name: "Dull Switch",
       images: {
-        Dull: "/images/swi12.jpg",
+        Dull: "images/swi12.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -164,7 +164,7 @@ export const switchData = [
       id: 17,
       name: "Gold Switch",
       images: {
-        Gold: "/images/swi13.jpg",
+        Gold: "images/swi13.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -177,7 +177,7 @@ export const switchData = [
       id: 18,
       name: "Joker Switch",
       images: {
-        Joker: "/images/swi14.jpg",
+        Joker: "images/swi14.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -190,7 +190,7 @@ export const switchData = [
       id: 19,
       name: "Special Pumpkin Switch",
       images: {
-        Pumpkin: "/images/swi18.jpg",
+        Pumpkin: "images/swi18.jpg",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
@@ -203,7 +203,7 @@ export const switchData = [
       id: 20,
       name: "Special Blurbrrry Switch",
       images: {
-        Blueberry: "/images/swi19.webp",
+        Blueberry: "images/swi19.webp",
       },
       description: "Clicky and tactile where you can hear each click.",
       price: 3.00,
