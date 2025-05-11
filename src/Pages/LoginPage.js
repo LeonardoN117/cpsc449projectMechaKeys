@@ -26,7 +26,7 @@ function LoginPage() {
 
   return (
     <div className="login-container">
-      <img src="../images/logo.png" alt="Logo" />
+      <img src="images/logo.png" alt="Logo" />
       <h2>Login</h2>
       <p>Enter your email and password.</p>
       <form onSubmit={handleSubmit}>
