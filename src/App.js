@@ -144,7 +144,7 @@ function AppContent() {
         return;
     }
 
-    const success_url = `${window.location.origin}/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
+const success_url = `${window.location.origin}/#/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
     const cancel_url = `${window.location.origin}/cart`;
 
     try {
