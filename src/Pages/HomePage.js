@@ -14,7 +14,7 @@ const HomePage = () => {
 
       {/* Keyboards Section */}
       <section className="content-section">
-        <img src="images/keyboards.jpg" alt="Keyboards"/>
+        <img src="/images/keyboards.jpg" alt="Keyboards"/>
         <div>
           <h2>Keyboards</h2>
           <p>Discover the latest mechanical keyboards designed for gamers and professionals.</p>
