@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { HashRouter as Router, Routes, Route, Link, useNavigate, useLocation, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation, Navigate } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import KeyboardPage from "./Pages/KeyboardsPage";
 import LoginPage from "./Pages/LoginPage";
@@ -144,7 +144,7 @@ function AppContent() {
         return;
     }
 
-const success_url = `${window.location.origin}/#/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
+    const success_url = `${window.location.origin}/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
     const cancel_url = `${window.location.origin}/cart`;
 
     try {
