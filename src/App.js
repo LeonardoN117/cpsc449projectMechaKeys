@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation, Navigate } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import KeyboardPage from "./Pages/KeyboardsPage";
 import LoginPage from "./Pages/LoginPage";
@@ -233,7 +233,8 @@ function AppContent() {
 
       <div className="container">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/keyboard" element={<KeyboardPage addToCart={addToCart} user={user} />} />
           <Route path="/switches" element={<SwitchPage addToCart={addToCart} user={user} />} />
           <Route path="/accessories" element={<AccessoriesPage addToCart={addToCart} user={user} />} />
@@ -244,6 +245,7 @@ function AppContent() {
           <Route path="/orderHistory" element={<OrderHistoryPage orders={orders} />} />
           <Route path="/orderSuccess" element={<OrderSuccessPage cart={[]} user={user} />} />
         </Routes>
+
       </div>
 
       {!hideFooter && (
