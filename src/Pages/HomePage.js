@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero" style={{ backgroundImage: "url('/images/hero.jpg')" }}>
+      <section className="hero" style={{ backgroundImage: "url('images/hero.jpg')" }}>
         <h1>Find Your Perfect Gaming Keyboard</h1>
         <p>Custom mechanical keyboards for every gamer and enthusiast.</p>
         <Link to="/keyboard" className="cta-button">Shop Now</Link>
