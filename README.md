@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+## README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Project Information
 
-## Available Scripts
+Project Name: MechaKeys
 
-In the project directory, you can run:
+Team Number: 1
 
-### `npm start`
+Team Members' Names: Cesar Jasso, Daniel Kang, Leonardo Nava
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💻 Code and Deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GitHub Repository URL: https://github.com/LeonardoN117/cpsc449projectMechaKeys
 
-### `npm test`
+Live Website URL: https://leonardon117.github.io/cpsc449projectMechaKeys/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📚 Project Overview
 
-### `npm run build`
+MechaKeys is an e-commerce web application for purchasing mechanical keyboards and accessories. The platform offers a modern shopping experience with filters, product previews, user authentication, shopping cart, order tracking, and reviews.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Backend Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Database Used: Supabase (PostgreSQL backend with authentication and storage)
 
-### `npm run eject`
+**APIs Developed and Integrated:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Supabase API for authentication (signup/login/logout)
+  
+- Supabase API for inserting and retrieving order history data
+  
+- Stripe API (via serverless function by group member) for handling payment checkout
+  
+- Supabase storage retrieval for user sessions and secure content access
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌟 Core Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Account registration and login
+- Product filtering by name and price
+- Product detail modal with color selection and add-to-cart functionality
+- Shopping cart with quantity tracking and checkout
+- Order history saved to Supabase per authenticated user
+- Review system (allowed only for past buyers)
+- User settings (update email/password, delete account)
+- Responsive navigation with dropdown menu for authenticated users
+- Stripe integration for payment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📝 Feature Details
 
-## Learn More
+**Authentication:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Users can sign up and log in using Supabase Auth. Their session is tracked with a listener to enable dynamic navbar content and secure access to settings and order history pages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Cart & Orders:**
 
-### Code Splitting
+Items added to the cart are stored in state until checkout. During checkout, the items are inserted into a Supabase table and tied to the user's ID. Users can view their personalized order history by querying this table.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Reviews:**
 
-### Analyzing the Bundle Size
+Users are allowed to leave a rating only if their user ID is matched with an existing order containing that item.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Stripe Payments:**
 
-### Making a Progressive Web App
+Handled through a serverless function that securely sends cart data to Stripe and returns a session URL for the checkout interface. Payment success is tracked separately.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Settings Page:**
 
-### Advanced Configuration
+Users can change their email or password and delete their account. Account deletion uses an RPC (admin-level) policy on Supabase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔧 Local Deployment
 
-### Deployment
+**Prerequisites:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Node.js and npm installed
 
-### `npm run build` fails to minify
+**Setup:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+git clone [https://github.com/cesarjasso/mechakeys.git](https://github.com/LeonardoN117/cpsc449projectMechaKeys)
+
+cd mechakeys
+
+npm install
+
+npm start
+
+This will launch the app at http://localhost:3000
+
+## 🔧 Supabase Setup
+
+Create a project on https://supabase.com
+
+Add a table named orders with fields:
+
+id: uuid
+
+user_id: uuid
+
+product_name: text
+
+selected_color: text
+
+quantity: numeric
+
+price: numeric
+
+created_at: timestamptz
+
+
+Enable Row Level Security (RLS)
+
+
+Add a policy to allow logged-in users to SELECT and INSERT only their own orders:
+
+-- For SELECT and INSERT
+
+user_id = auth.uid()
+
+
+Add your Supabase credentials in a .env.local:
+
+REACT_APP_SUPABASE_URL=https://xyz.supabase.co
+
+REACT_APP_SUPABASE_ANON_KEY=your-anon-key
+
+
+## 💳Stripe Setup
+
+Stripe Checkout is used for payment processing.
+
+Stripe API
+
+Stripe integration added in CheckoutPage and backend webhook for order confirmation (optional)
+
+## ✨Contributing
+
+This is a class project. Pull requests are welcome for bug fixes or enhancements.
+
+## 📄 License
+
+This project is for educational purposes only.
+
