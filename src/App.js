@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import KeyboardPage from "./Pages/KeyboardsPage";
 import LoginPage from "./Pages/LoginPage";
@@ -28,9 +28,10 @@ function AppContent() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const hideFooter = ["/login", "/signup", "/settings"].includes(location.pathname);
 
-  
+  const currentPath = location.pathname.replace(/^#/, ''); // Remove leading # if present
+  const hideFooter = ["/login", "/signup", "/settings"].includes(currentPath);
+
 
   useEffect(() => {
     const fetchUserAndOrders = async () => {
@@ -111,11 +112,10 @@ function AppContent() {
     }
     if (!user) {
         alert("Please log in to check out.");
-        navigate('/login');
+        navigate('/login'); // This will navigate to /#/login with HashRouter
         return;
     }
 
-    // Format cart items for Stripe
     let line_items;
     try {
         line_items = cart.map(item => {
@@ -144,26 +144,23 @@ function AppContent() {
         return;
     }
 
-    const success_url = `${window.location.origin}/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
-    const cancel_url = `${window.location.origin}/cart`;
+    const success_url = `${window.location.origin}/#/orderSuccess?session_id={CHECKOUT_SESSION_ID}`;
+    const cancel_url = `${window.location.origin}/#/cart`;
 
     try {
-        // Create Stripe session
         console.log("Creating Stripe session with line items:", JSON.stringify(line_items, null, 2));
         const session = await stripeServer.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items: line_items,
             mode: 'payment',
             success_url: success_url,
-            cancel_url: cancel_url,
+            cancel_url: cancel_url,  
             metadata: {
                 userId: user.id,
             },
         });
         console.log("Stripe session created:", session.id);
 
-
-        // Redirect to Stripe Checkout
         const stripe = await stripePromise;
           if (!stripe) {
             throw new Error("Stripe.js failed to load.");
@@ -191,7 +188,7 @@ function AppContent() {
     await supabase.auth.signOut();
     setUser(null);
     setShowDropdown(false);
-    navigate("/");
+    navigate("/"); // This will navigate to /#/ with HashRouter
   };
 
   return (
@@ -248,7 +245,7 @@ function AppContent() {
 
       {!hideFooter && (
         <footer className="footer">
-          <p>&copy; 2025 MechaKeys. All rights reserved.</p>
+          <p>© 2025 MechaKeys. All rights reserved.</p>
           <div>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
